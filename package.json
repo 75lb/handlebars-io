@@ -1,6 +1,6 @@
 {
   "name": "handlebars-io",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of handlebars helpers that do IO",
   "repository": "https://github.com/75lb/handlebars-io",
   "main": "lib/handlebars-io.js",
