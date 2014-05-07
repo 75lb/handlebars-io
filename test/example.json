@@ -1,17 +1,7 @@
 {
-    "post":{
-        "template": "post.hbs",
-        "data": {
-            "article": {
-                "filename": "article.md",
-                "source": "{{read this.filename}}",
-                "title": "{{front-matter-extract this.source frontMatter.title}}",
-                "author": "{{front-matter-extract this.source frontMatter.author}}",
-                "content": "{{front-matter-extract this.source content}}",
-                "url": "{{urlBuilder this.title}}",
-                "image": "{{articleImgSrc this.title}}"
-            },
-            "rootFolder": "../../../"
-        }
-    }
+    "filename": "front-matter.md",
+    "source": "{{read 'front-matter.md' true}}",
+    "title": "{{front-matter (read 'front-matter.md') 'title'}}",
+    "author": "{{front-matter (read 'front-matter.md') 'author'}}",
+    "content": "{{front-matter (read 'front-matter.md') '_remainder' true}}"
 }
