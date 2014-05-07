@@ -1,0 +1,13 @@
+{
+  "name": "handlebars-io",
+  "version": "0.0.0",
+  "description": "A collection of handlebars helpers that do IO",
+  "main": "lib/handlebars-io.js",
+  "author": "Lloyd Brookes",
+  "dependencies": {
+    "more-fs": "~0.3.0"
+  },
+  "devDependencies": {
+    "handlebars": "^2.0.0-alpha.2"
+  }
+}

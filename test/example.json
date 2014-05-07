@@ -1,0 +1,17 @@
+{
+    "post":{
+        "template": "post.hbs",
+        "data": {
+            "article": {
+                "filename": "article.md",
+                "source": "{{read this.filename}}",
+                "title": "{{front-matter-extract this.source frontMatter.title}}",
+                "author": "{{front-matter-extract this.source frontMatter.author}}",
+                "content": "{{front-matter-extract this.source content}}",
+                "url": "{{urlBuilder this.title}}",
+                "image": "{{articleImgSrc this.title}}"
+            },
+            "rootFolder": "../../../"
+        }
+    }
+}
