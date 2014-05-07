@@ -2,13 +2,13 @@ var mfs = require("more-fs");
 
 function escapeForJSON (str) {
     return str
-      .replace(/[\"]/g, '\\"')
       .replace(/[\\]/g, '\\\\')
       .replace(/[\/]/g, '\\/')
       .replace(/[\b]/g, '\\b')
       .replace(/[\f]/g, '\\f')
       .replace(/[\n]/g, '\\n')
       .replace(/[\r]/g, '\\r')
+      .replace(/[\"]/g, '\\"')
       .replace(/[\t]/g, '\\t'); 
 }
 
