@@ -1,21 +1,10 @@
-var mfs = require("more-fs");
-
-function escapeForJSON (str) {
-    return str
-      .replace(/[\\]/g, '\\\\')
-      .replace(/[\/]/g, '\\/')
-      .replace(/[\b]/g, '\\b')
-      .replace(/[\f]/g, '\\f')
-      .replace(/[\n]/g, '\\n')
-      .replace(/[\r]/g, '\\r')
-      .replace(/[\"]/g, '\\"')
-      .replace(/[\t]/g, '\\t'); 
-}
+var mfs = require("more-fs"),
+    w = require("wodge");
 
 module.exports = function(handlebars){
     handlebars.registerHelper("read", function(filename, escape){
         var result = mfs.read(filename);
-        if (escape === true) result = escapeForJSON(result);
+        if (escape === true) result = w.escapeForJSON(result);
         return result;
     });
 };
