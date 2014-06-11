@@ -1,5 +1,4 @@
 var mfs = require("more-fs"),
-    w = require("wodge"),
     fs = require("fs");
 
 module.exports = function(handlebars){

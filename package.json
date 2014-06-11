@@ -6,10 +6,12 @@
   "main": "lib/handlebars-io.js",
   "author": "Lloyd Brookes",
   "dependencies": {
-    "more-fs": "~0.3.0",
-    "wodge": "^0.6.0"
+    "more-fs": "~0.4.0"
   },
   "devDependencies": {
     "handlebars": "^2.0.0-alpha.2"
+  },
+  "scripts":{
+      "lint": "jshint lib/handlebars-io.js helpers/*.js; echo"
   }
 }
